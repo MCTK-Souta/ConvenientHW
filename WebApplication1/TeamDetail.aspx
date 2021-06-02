@@ -20,7 +20,6 @@
                         <div class="col-sm-2">
                             <asp:Image ID="img" runat="server" Height="100" Width="100" />
                             <p>店名：<%# Eval("Shop_Name") %></p>
-                            <asp:Label ID="lbshopid" runat="server" Text="" Visible="false"></asp:Label>
                         </div>
                         <div class="col-sm-10">
                             <p>團：<%# Eval("TeamName") %></p>
@@ -30,12 +29,12 @@
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
-            <asp:Repeater ID="Repeater2" runat="server">
+            <asp:Repeater ID="Repeater2" runat="server" OnItemDataBound="Repeater2_ItemDataBound">
                 <ItemTemplate>
                     <div class="row">
                         <div class="row col-sm-3" style="border-style:solid">
                             <div class="col-sm-3">
-                                <asp:Image ID="Image1" runat="server" />
+                                <asp:Image ID="Menu_img" runat="server" />
                             </div>
                             <div class="col-sm-9"> 
                                 <div><%# Eval("Menu_Name") %></div>

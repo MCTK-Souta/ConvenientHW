@@ -31,7 +31,7 @@
                 <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="repList_ItemDataBound">
                     <ItemTemplate>
                         <div style="border-style:solid" class="row btn-primary active" 
-                            onclick="location.href='TeamDetail.aspx?Team_ID=<%# Eval("Team_ID") %>'">
+                            onclick="location.href='TeamDetail.aspx?Team_ID=<%# Eval("Team_ID") %>&Shop_ID=<%# Eval("Shop_ID") %>'">
                             <div class="col-sm-2" style="text-align:center">
                                <asp:Image ID="img" runat="server" Width="100" Height="100"/>
                                 <p style="text-align:center">
